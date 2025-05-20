@@ -55,3 +55,16 @@ export function deletePassenger(id: DeletePassengerParams['id']): void {
   const stmt = db.prepare('DELETE FROM PassengerInfo WHERE id = ?');
   stmt.run(id);
 }
+
+/*
+CREATE TABLE PassengerInfo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    flight_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    passport_number TEXT NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (flight_id) REFERENCES FlightInfo(id),
+    FOREIGN KEY (user_id) REFERENCES UserInfo(id)
+);
+*/

@@ -1,0 +1,11 @@
+username,password,email
+admin,admin,admin@example.com
+user1,password123,user1@example.com
+user2,securepass,user2@example.com
+alice,alicenewpass,alice@example.com
+bob,bobpass,bob@example.com
+charlie,charliepwd,charlie@example.com
+diana,dianasecret,diana@example.com
+eve,evecode,eve@example.com
+frank,frankie,frank@example.com
+grace,graceword,grace@example.com

@@ -14,23 +14,28 @@ db.exec(`
 CREATE TABLE IF NOT EXISTS UserInfo (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   username TEXT NOT NULL UNIQUE,
-  password TEXT NOT NULL
+  password TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS FlightInfo (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    flightNumber TEXT NOT NULL,
+    flight_number TEXT NOT NULL UNIQUE,
     departure TEXT NOT NULL,
     arrival TEXT NOT NULL,
-    date TEXT NOT NULL
+    departure_time DATETIME NOT NULL,
+    arrival_time DATETIME NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS PassengerInfo (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    age INTEGER NOT NULL,
-    flightId INTEGER,
-    FOREIGN KEY (flightId) REFERENCES FlightInfo(id)
+    passport_number TEXT NOT NULL UNIQUE,
+    seatNumber TEXT,
+    flightId INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 `);
 

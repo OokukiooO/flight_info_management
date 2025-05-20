@@ -37,10 +37,11 @@ interface ColumnType {
 }
 
 const columns: ColumnType[] = [
-    { title: '航班号', dataIndex: 'flightNumber', key: 'flightNumber' },
+    { title: '航班号', dataIndex: 'flight_number', key: 'flightNumber' },
     { title: '出发地', dataIndex: 'departure', key: 'departure' },
     { title: '目的地', dataIndex: 'arrival', key: 'arrival' },
-    { title: '起飞时间', dataIndex: 'date', key: 'date' },
+    { title: '起飞时间', dataIndex: 'departure_time', key: 'date' },
+    { title: '到达时间', dataIndex: 'arrival_time', key: 'date' },
     {
         title: '操作',
         key: 'action',

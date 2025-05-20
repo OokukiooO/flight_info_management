@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Date: 2025-05-20 23:10:12
+ * @LastEditTime: 2025-05-20 23:57:53
+ * @FilePath: /flight_info_management/src/app/orderManage/page.tsx
+ */
+
 'use client';
 import { useState, useEffect } from 'react';
 import { Table } from 'antd';
@@ -18,7 +25,7 @@ export default function OrderManage() {
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>订单管理</h2>
+      <h2 style={{ marginBottom: 24, color: '#000'  }}>订单管理</h2>
       <Table columns={columns} dataSource={data} rowKey="id" />
     </div>
   );

@@ -39,7 +39,7 @@ export default function FlightEdit() {
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>修改航班信息</h2>
+      <h2 style={{ marginBottom: 24, color: '#000'  }}>修改航班信息</h2>
       <Form form={form} onFinish={onFinish} layout="vertical">
         <Form.Item name="flightNumber" label="航班号" rules={[{ required: true }]}>
           <Input />

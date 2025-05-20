@@ -1,8 +1,8 @@
 /*
  * @Description: 
- * @Date: 2025-05-18 20:02:32
- * @LastEditTime: 2025-05-18 20:21:16
- * @FilePath: \flight_info_management\src\app\dashboard\page.tsx
+ * @Date: 2025-05-18 20:13:49
+ * @LastEditTime: 2025-05-20 23:51:41
+ * @FilePath: /flight_info_management/src/app/dashboard/page.tsx
  */
 
 'use client';
@@ -25,25 +25,36 @@ export default function DashboardPage() {
   if (!stats) return <Spin />;
 
   return (
-    <div>
-      <h1 style={{ fontSize: 28, marginBottom: 24, color: 'black' }}>欢迎使用航班信息管理系统</h1>
-      <Row gutter={24}>
-        <Col span={8}>
-          <Card>
-            <Statistic title="用户总数" value={stats.userCount} prefix={<UserOutlined />} />
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card>
-            <Statistic title="航班总数" value={stats.flightCount} prefix={<TableOutlined />} />
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card>
-            <Statistic title="订单总数" value={stats.orderCount} prefix={<OrderedListOutlined />} />
-          </Card>
-        </Col>
-      </Row>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100%',
+      background: '#f5f5f5',
+      padding: 32,
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      borderRadius: 8,
+    }}>
+      <div style={{ width: '100%', maxWidth: 800 }}>
+        <h1 style={{ fontSize: 28, marginBottom: 24, textAlign: 'center', color: 'black' }}>欢迎使用航班信息管理系统</h1>
+        <Row gutter={24}>
+          <Col span={8}>
+            <Card>
+              <Statistic title="用户总数" value={stats.userCount} prefix={<UserOutlined />} />
+            </Card>
+          </Col>
+          <Col span={8}>
+            <Card>
+              <Statistic title="航班总数" value={stats.flightCount} prefix={<TableOutlined />} />
+            </Card>
+          </Col>
+          <Col span={8}>
+            <Card>
+              <Statistic title="订单总数" value={stats.orderCount} prefix={<OrderedListOutlined />} />
+            </Card>
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 }

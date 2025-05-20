@@ -1,8 +1,8 @@
 /*
  * @Description: 
  * @Date: 2025-05-18 20:13:49
- * @LastEditTime: 2025-05-18 20:14:02
- * @FilePath: \flight_info_management\src\app\flightAdd\page.tsx
+ * @LastEditTime: 2025-05-20 23:56:46
+ * @FilePath: /flight_info_management/src/app/flightAdd/page.tsx
  */
 
 'use client';
@@ -25,7 +25,7 @@ export default function FlightAdd() {
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>添加航班信息</h2>
+      <h2 style={{ marginBottom: 24, color: '#000' }}>添加航班信息</h2>
       <Form form={form} onFinish={onFinish} layout="vertical">
         <Form.Item name="flightNumber" label="航班号" rules={[{ required: true }]}>
           <Input />

@@ -32,7 +32,7 @@ export default function FlightSearching() {
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>航班查询</h2>
+      <h2 style={{ marginBottom: 24, color: '#000'  }}>航班查询</h2>
       <Form form={form} layout="inline" onFinish={onSearch}>
         <Form.Item name="departure" label="出发地">
           <Input placeholder="出发地" />

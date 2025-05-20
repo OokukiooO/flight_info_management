@@ -61,7 +61,7 @@ const columns: ColumnType[] = [
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>航班管理</h2>
+      <h2 style={{ marginBottom: 24, color: '#000'  }}>航班管理</h2>
       <Table columns={columns} dataSource={data} rowKey="id" />
     </div>
   );

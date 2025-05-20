@@ -1,0 +1,28 @@
+CREATE TABLE UserInfo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE FlightInfo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    flight_number TEXT NOT NULL UNIQUE,
+    departure TEXT NOT NULL,
+    arrival TEXT NOT NULL,
+    departure_time DATETIME NOT NULL,
+    arrival_time DATETIME NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE PassengerInfo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    flight_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    passport_number TEXT NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (flight_id) REFERENCES FlightInfo(id),
+    FOREIGN KEY (user_id) REFERENCES UserInfo(id)
+);
